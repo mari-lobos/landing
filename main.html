@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kave</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón para saltar al contenido principal -->
+    <a href="#hero" class="skip-link" role="link" aria-label="Saltar al contenido principal">Saltar al contenido principal</a>
+    
+    <header>
+        <div class="logo" role="banner">Kave</div>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#colaboramos">Colaboramos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="#login" class="btn" role="button" aria-label="Iniciar sesión">Iniciar sesión</a>
+    </header>
+    
+    <main>
+        <section id="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Nueva temporada</h1>
+            <p>Nueva colección SS25</p>
+            <a href="#productos" class="btn" role="button" aria-label="Ver productos">Ver productos</a>
+            <a href="#editorial" class="btn" role="button" aria-label="Ver editorial">Ver editorial</a>
+        </section>
+
+        <section id="productos" aria-labelledby="productos-heading">
+            <h2 id="productos-heading">Nuestros productos</h2>
+            <div class="carousel-container" role="region" aria-live="polite">
+                <button class="prev" onclick="moveSlide(-1)" aria-label="Carrusel anterior">&#10094;</button>
+                <div class="productos-carousel">
+                    <div class="producto">
+                        <img src="assets/images/sofa_1.jpg" alt="" width="150">
+                        <p>Sofá Luniro - 22€</p>
+                    </div>
+                    <div class="producto">
+                        <img src="assets/images/sofa_2.jpg" alt="" width="150">
+                        <p>Sofá Litto - 569€</p>
+                    </div>
+                    <div class="producto">
+                        <img src="assets/images/sofa_3.jpg" alt="" width="150">
+                        <p>Sofá Nordik - 120€</p>
+                    </div>
+                    <div class="producto">
+                        <img src="assets/images/silla_1.jpg" alt="" width="150">
+                        <p>Silla Arlen - 75€</p>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)" aria-label="Carrusel siguiente">&#10095;</button>
+            </div>
+        </section>
+
+        <section id="contacto" aria-labelledby="contacto-heading">
+            <h2 id="contacto-heading">¿Tienes dudas sobre nuestros productos?</h2>
+            <form aria-labelledby="contacto-form">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required aria-required="true">
+                
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required aria-required="true"></textarea>
+                
+                <button type="submit" aria-label="Enviar mensaje">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SOBRE NOSOTROS</h3>
+                <p><a href="#nuestra-historia" class="footer-link">Nuestra historia</a></p>
+                <p><a href="#kave-cares" class="footer-link">Kave Cares: sostenibilidad</a></p>
+                <p><a href="#tienda" class="footer-link">Encuentra tu tienda</a></p>
+                <p><a href="#trabaja-con-nosotros" class="footer-link">Trabaja con nosotros</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACTO Y AYUDA</h3>
+                <p><a href="#preguntas-frecuentes" class="footer-link">Preguntas frecuentes</a></p>
+                <p><a href="#devoluciones" class="footer-link">Devoluciones e incidencias</a></p>
+                <p><a href="#estado-pedido" class="footer-link">Consultar el estado de mi pedido</a></p>
+                <p><a href="#contacta" class="footer-link">Contacta con nosotros</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>¿COLABORAMOS?</h3>
+                <p><a href="#prensa" class="footer-link">Prensa, Embajadores, Expansión</a></p>
+                <p><a href="#kave-pro" class="footer-link">Kave Pro: servicio para profesionales</a></p>
+                <p><a href="#kave-affiliates" class="footer-link">Kave Affiliates: afiliados</a></p>
+                <p><a href="#proveedores" class="footer-link">¿Eres un proveedor?</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>TU CUENTA</h3>
+                <p><a href="#newsletter" class="footer-link">Suscríbete a la newsletter</a></p>
+                <p><a href="#tarjeta-regalo" class="footer-link">Tarjeta regalo</a></p>
+                <p><a href="#registrarse" class="footer-link">Regístrate</a></p>
+                <p><a href="#iniciar-sesion" class="footer-link">Inicia sesión</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        let slideIndex = 0;
+        function moveSlide(n) {
+            const slides = document.querySelectorAll('.producto');
+            slideIndex += n;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            document.querySelector('.productos-carousel').style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>

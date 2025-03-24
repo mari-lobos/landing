@@ -1,0 +1,237 @@
+/* General */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Estilo para el botón de 'Saltar al contenido principal' */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Inicialmente oculto */
+    left: 10px;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Cuando el enlace tiene el foco, se hace visible */
+.skip-link:focus {
+    top: 10px; /* Se mueve hacia abajo para ser visible */
+    outline: none; /* Elimina el borde predeterminado */
+    transition: top 0.3s ease-in-out; /* Efecto suave para cuando se enfoque */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    font-size: 1.1em;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+}
+
+#hero .btn {
+    margin-top: 20px;
+}
+
+/* Productos */
+#productos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 2em;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.producto {
+    margin: 0 20px;
+    text-align: center;
+    width: 250px; /* Aumentar el tamaño de las cards */
+    transition: transform 0.3s;
+}
+
+.producto img {
+    border-radius: 8px;
+    width: 100%; /* Aseguramos que la imagen ocupe toda la card */
+}
+
+.producto p {
+    margin-top: 10px;
+}
+
+button.prev, button.next {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Contacto */
+#contacto {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 440px; /* Ancho fijo del formulario */
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form button {
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    padding: 40px 20px;
+    border-top: 2px solid black;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-link {
+    color: black;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
