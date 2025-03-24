@@ -59,6 +59,12 @@ nav a {
     font-size: 1.1em;
 }
 
+nav ul li a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px; 
+}
+
 .btn {
     padding: 10px 20px;
     border: 1px solid black;
